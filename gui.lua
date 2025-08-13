@@ -310,12 +310,12 @@ local script = G2L["7"];
 		end
 	end)
 	
-	rs.RenderStepped:Connect(function()
+	while task.wait() do
 		if teleport == true then
 			char:WaitForChild('HumanoidRootPart').CFrame = victim:WaitForChild('HumanoidRootPart').CFrame 
 
 		end
-	end)
+	end
 end;
 task.spawn(C_7);
 -- StarterGui.ScreenGui.Frame.load.LocalScript
