@@ -285,6 +285,7 @@ local script = G2L["7"];
 	local teleport = false
 	local player = game.Players.LocalPlayer
 	local char = player.Character or player.CharacterAdded:Wait()
+	local rs = game:GetService("RunService")
 	
 	btm.MouseButton1Down:Connect(function()
 		if btm then
@@ -309,12 +310,12 @@ local script = G2L["7"];
 		end
 	end)
 	
-	while task.wait() do
+	rs.RenderStepped:Connect(function()
 		if teleport == true then
 			char:WaitForChild('HumanoidRootPart').CFrame = victim:WaitForChild('HumanoidRootPart').CFrame 
-			
+
 		end
-	end
+	end)
 end;
 task.spawn(C_7);
 -- StarterGui.ScreenGui.Frame.load.LocalScript
