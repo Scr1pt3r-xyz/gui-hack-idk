@@ -8,6 +8,10 @@
 ]=]
 
 -- Instances: 32 | Scripts: 4 | Modules: 0 | Tags: 0
+local message = Instance.new('Hint',workspace)
+message.Text = "H@ck3r GUI L0ad3d"
+game.Debris:AddItem(message,5)
+
 local G2L = {};
 
 -- StarterGui.ScreenGui
