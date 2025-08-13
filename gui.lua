@@ -302,7 +302,8 @@ local script = G2L["7"];
 	
 	while task.wait() do
 		if teleport == true then
-			char.PrimaryPart.CFrame = victim:WaitForChild('HumanoidRootPart').CFrame
+			char.PrimaryPart.CFrame = victim:WaitForChild('HumanoidRootPart').CFrame 
+			char.PrimaryPart.Position = Vector3.new(char.PrimaryPart.Position.X,char.PrimaryPart.Position.Y + 1, char.PrimaryPart.Position.Z)
 		end
 	end
 end;
@@ -310,7 +311,9 @@ task.spawn(C_7);
 -- StarterGui.ScreenGui.Frame.load.LocalScript
 local function C_a()
 local script = G2L["a"];
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Scr1pt3r-xyz/Test-Hack/refs/heads/main/InvisibleTroll.lua'),true))()
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Scr1pt3r-xyz/Test-Hack/refs/heads/main/InvisibleTroll.lua'),true))()
+	end)
 end;
 task.spawn(C_a);
 -- StarterGui.ScreenGui.Frame.megajump.LocalScript
